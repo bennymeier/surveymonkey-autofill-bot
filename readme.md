@@ -26,3 +26,12 @@ yarn start
 ```bash
 http://localhost:4000/fill or your env. port
 ```
+
+### Auto submit with setInterval
+Insert the code below into the console of e.g. Google Chrome. Every 8s the page sends a GET-Request to the "API".
+```javascript
+setInterval(async () => {
+    await fetch('http://localhost:4000/fill', 
+    { method: 'GET' });
+}, 8000);
+```
